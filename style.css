@@ -58,6 +58,13 @@ nav ul li a:hover {
     color: #ffd700; /* Amarelo dourado para destaque */
 }
 
+/* Adicionado para Acessibilidade: Indica foco do teclado de forma clara */
+nav ul li a:focus-visible {
+    outline: 3px solid #ffd700; /* Contorno amarelo para indicar foco */
+    outline-offset: 4px; /* Espaçamento entre o elemento e o contorno */
+    border-radius: 2px;
+}
+
 /* Seções gerais */
 .section-padded {
     padding: 80px 20px;
@@ -142,6 +149,13 @@ nav ul li a:hover {
     background-color: #ec971f;
 }
 
+/* Adicionado para Acessibilidade: Indica foco do teclado de forma clara */
+.btn:focus-visible {
+    outline: 3px solid #3498db; /* Contorno azul para indicar foco */
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
 /* Seção Sobre */
 .sobre-content {
     display: flex;
@@ -214,6 +228,14 @@ nav ul li a:hover {
     margin: 40px auto 0 auto;
 }
 
+/* Estiliza os rótulos do formulário para melhor visibilidade */
+.contact-form label {
+    font-weight: bold;
+    color: white; /* Cor do texto do label no fundo escuro */
+    text-align: left; /* Alinha o texto do label à esquerda */
+    margin-bottom: -10px; /* Ajusta o espaçamento entre o label e o input */
+}
+
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
@@ -224,6 +246,15 @@ nav ul li a:hover {
     font-size: 1rem;
     background-color: #f9f9f9;
     color: #333;
+}
+
+/* Adicionado para Acessibilidade: Indica foco do teclado em campos de formulário */
+.contact-form input[type="text"]:focus-visible,
+.contact-form input[type="email"]:focus-visible,
+.contact-form textarea:focus-visible {
+    outline: 3px solid #f0ad4e; /* Contorno laranja para indicar foco */
+    outline-offset: 4px;
+    border-radius: 2px;
 }
 
 .contact-form textarea {

@@ -11,14 +11,14 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Navegação Principal do Site">
             <h1>Festejando a Conexão</h1>
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#inicio" title="Ir para a seção Início">Início</a></li>
+                <li><a href="#sobre" title="Ir para a seção Sobre o evento">Sobre</a></li>
+                <li><a href="#eventos" title="Ir para a seção de Próximos Eventos">Eventos</a></li>
+                <li><a href="#galeria" title="Ir para a Galeria de Imagens">Galeria</a></li>
+                <li><a href="#contato" title="Ir para a seção de Contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +28,7 @@
             <div class="hero-content">
                 <h2>Onde o Campo Encontra a Cidade</h2>
                 <p>Uma celebração da união, da cultura e das tradições que nos conectam.</p>
-                <a href="#eventos" class="btn">Veja Nossos Eventos</a>
+                <a href="#eventos" class="btn" role="button">Veja Nossos Eventos</a>
             </div>
         </section>
 
@@ -43,46 +43,52 @@
         <section id="eventos" class="section-padded bg-light">
             <h2>Próximos Eventos</h2>
             <div class="eventos-grid">
-                <div class="evento-card">
+                <article class="evento-card">
                     <h3>Feira de Produtos Locais</h3>
-                    <p><strong>Data:</strong> 15/Setembro/2025</p>
+                    <p><strong>Data:</strong> <time datetime="2025-09-15">15/Setembro/2025</time></p>
                     <p><strong>Local:</strong> Praça Central da Cidade</p>
                     <p>Traga sua ecobag e venha saborear o que há de melhor do campo!</p>
-                </div>
-                <div class="evento-card">
+                </article>
+                <article class="evento-card">
                     <h3>Workshop de Hortas Urbanas</h3>
-                    <p><strong>Data:</strong> 22/Setembro/2025</p>
+                    <p><strong>Data:</strong> <time datetime="2025-09-22">22/Setembro/2025</time></p>
                     <p><strong>Local:</strong> Centro Comunitário</p>
                     <p>Aprenda a cultivar seus próprios alimentos, mesmo em pequenos espaços.</p>
-                </div>
-                <div class="evento-card">
+                </article>
+                <article class="evento-card">
                     <h3>Contação de Causos do Campo</h3>
-                    <p><strong>Data:</strong> 29/Setembro/2025</p>
+                    <p><strong>Data:</strong> <time datetime="2025-09-29">29/Setembro/2025</time></p>
                     <p><strong>Local:</strong> Biblioteca Municipal</p>
                     <p>Histórias que aquecem o coração e celebram a vida no interior.</p>
-                </div>
+                </article>
             </div>
         </section>
 
         <section id="galeria" class="section-padded">
             <h2>Galeria de Conexões</h2>
             <div class="galeria-grid">
-                <img src="https://via.placeholder.com/300x200/8BC34A/FFFFFF?text=Campo" alt="Imagem do Campo">
-                <img src="https://via.placeholder.com/300x200/2196F3/FFFFFF?text=Cidade" alt="Imagem da Cidade">
-                <img src="https://via.placeholder.com/300x200/FFC107/FFFFFF?text=Colheita" alt="Imagem da Colheita">
-                <img src="https://via.placeholder.com/300x200/9C27B0/FFFFFF?text=Mercado" alt="Imagem de Mercado Urbano">
-                <img src="https://via.placeholder.com/300x200/4CAF50/FFFFFF?text=Natureza" alt="Imagem da Natureza">
-                <img src="https://via.placeholder.com/300x200/00BCD4/FFFFFF?text=Arquitetura" alt="Imagem de Arquitetura Urbana">
+                <img src="https://via.placeholder.com/300x200/8BC34A/FFFFFF?text=Campo" alt="Vista panorâmica de um campo verde sob um céu azul claro.">
+                <img src="https://via.placeholder.com/300x200/2196F3/FFFFFF?text=Cidade" alt="Horizonte de uma cidade moderna com arranha-céus iluminados ao entardecer.">
+                <img src="https://via.placeholder.com/300x200/FFC107/FFFFFF?text=Colheita" alt="Mãos colhendo legumes frescos de uma horta, simbolizando a abundância da colheita.">
+                <img src="https://via.placeholder.com/300x200/9C27B0/FFFFFF?text=Mercado" alt="Bancas coloridas em um mercado de rua urbano, com pessoas comprando produtos.">
+                <img src="https://via.placeholder.com/300x200/4CAF50/FFFFFF?text=Natureza" alt="Detalhe de folhas verdes orvalhadas, transmitindo frescor e vitalidade da natureza.">
+                <img src="https://via.placeholder.com/300x200/00BCD4/FFFFFF?text=Arquitetura" alt="Fachada de um edifício com design arquitetônico único e contemporâneo na cidade.">
             </div>
         </section>
 
         <section id="contato" class="section-padded bg-dark">
             <h2>Entre em Contato</h2>
             <p>Quer saber mais ou participar? Envie-nos uma mensagem!</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu E-mail" required>
-                <textarea placeholder="Sua Mensagem" rows="5"></textarea>
+            <form class="contact-form" aria-label="Formulário para enviar mensagem de contato">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" placeholder="Seu E-mail" required>
+
+                <label for="mensagem">Sua Mensagem:</label>
+                <textarea id="mensagem" placeholder="Sua Mensagem" rows="5"></textarea>
+
                 <button type="submit" class="btn">Enviar Mensagem</button>
             </form>
         </section>
